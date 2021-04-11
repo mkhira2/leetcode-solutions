@@ -3,6 +3,8 @@
  * @return {string}
  */
 var interpret = function (command) {
+    // leetcode doesn't support replaceAll,
+    // which could be another solution
     let parsedCommand = command.split('()').join('o')
     parsedCommand = parsedCommand.split('(').join('')
     parsedCommand = parsedCommand.split(')').join('')
