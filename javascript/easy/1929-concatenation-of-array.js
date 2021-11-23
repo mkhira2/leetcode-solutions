@@ -2,8 +2,20 @@
  * @param {number[]} nums
  * @return {number[]}
  */
+
+// solution 1
 var getConcatenation = function (nums) {
     return [...nums, ...nums]
+};
+
+// solution 2
+var getConcatenation = function (nums) {
+    let ans = [];
+    for (let i = 0; i < nums.length; i++) {
+        ans[i] = nums[i]
+        ans[i + nums.length] = nums[i]
+    }
+    return ans
 };
 
 /*
