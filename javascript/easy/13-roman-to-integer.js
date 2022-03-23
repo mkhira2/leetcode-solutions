@@ -16,9 +16,9 @@ var romanToInt = function (s) {
     let lastNumeral = null
     for (let numeral of s) {
         if (numeral === 'V' && lastNumeral === 'I') {
-            sum += 3
+            sum += 3;
         } else if (numeral === 'X' && lastNumeral === 'I') {
-            sum += 8
+            sum += 8;
         } else if (numeral === 'L' && lastNumeral === 'X') {
             sum += 30;
         } else if (numeral === 'C' && lastNumeral === 'X') {
@@ -26,7 +26,7 @@ var romanToInt = function (s) {
         } else if (numeral === 'D' && lastNumeral === 'C') {
             sum += 300;
         } else if (numeral === 'M' && lastNumeral === 'C') {
-            sum += 800
+            sum += 800;
         } else {
             sum += intToRomanMap[numeral]
         }
